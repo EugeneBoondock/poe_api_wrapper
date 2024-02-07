@@ -184,7 +184,7 @@ class PoeApi:
             headers = {'Content-Type': payload.content_type}
             payload = payload.to_string()
         if isinstance(payload, (bytes, str)):  
-            response = self.client.post(f'{self.BASE_URL}/poe_api/{path}', content=payload, headers=headers)
+            response = self.client.post(f'{self.BASE_URL}/poe_api/{path}', data=payload, headers=headers)
         else:
             response = self.client.post(f'{self.BASE_URL}/poe_api/{path}', data=payload, headers=headers)
         if response.status_code == 200:
