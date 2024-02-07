@@ -11,7 +11,7 @@ load_dotenv("config.env")
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Initialize Poe API client
-poe_client = PoeApi('HJ-av6eUsk2llTMCBj5cKg==')
+poe_client = os.getenv("POE_API_TOKEN")
 
 # Create Discord bot instance
 intents = discord.Intents.default()
